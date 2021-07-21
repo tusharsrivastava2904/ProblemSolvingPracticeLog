@@ -31,6 +31,7 @@ public class DivisibleSumPairs {
         Result result = new Result();
         int res = result.divisibleSumPairs(n, k, arr);
         System.out.println(res);
+        scanner.close();
     }
 	
 }
