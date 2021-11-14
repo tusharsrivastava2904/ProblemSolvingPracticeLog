@@ -8,6 +8,7 @@ import java.io.*;
 class CIELRCPT {
     public static void main (String[] args) throws java.lang.Exception {
         // your code goes here
+        //input
         Scanner sc = new Scanner(System.in);
         int testCase = sc.nextInt();
 
@@ -22,11 +23,13 @@ class CIELRCPT {
             target[i]=sc.nextInt();
         }
 
+        //driver code
         for(int i=0; i<target.length; i++){
             findMin(prices, target[i]);
         }
     }
 
+    //logic
     public static void findMin(int[] prices, int target){
         int remP=target, count=0;
         for(int i=prices.length-1; i>=0; i--){
