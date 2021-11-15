@@ -32,11 +32,21 @@ public class BetweenTheSets {
 
         //we count no. of multiples of LCM that evenly divide GCD
         int count = 0;
+
         //j is used as the multiplicator variable
-        for (int i = lcm_a, j=2; i<=gcd_b; i=lcm_a*j ,j++) {
+//        for (int i = lcm_a, j=2; i<=gcd_b; i=lcm_a*j ,j++) {
+//            if (gcd_b%i==0) {
+//                count++;
+//            }
+//        }
+
+        int i = lcm_a, j=2;
+        while( i<=gcd_b){
             if (gcd_b%i==0) {
                 count++;
             }
+            i=lcm_a*j ;
+            j++;
         }
 
         System.out.println(count);
