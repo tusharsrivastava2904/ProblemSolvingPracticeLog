@@ -2,12 +2,13 @@ package ProblemSolving;
 
 import java.util.Scanner;
 
+//WAP a fun() to convert time in sec
 public class TimeConversion {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int h =10;
-        int min = 30;
-        int sec = 23;
+        int h =sc.nextInt();
+        int min = sc.nextInt();
+        int sec = sc.nextInt();
         System.out.println(con(h, min, sec));
     }
 

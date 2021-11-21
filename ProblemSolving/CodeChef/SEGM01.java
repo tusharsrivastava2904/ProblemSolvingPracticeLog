@@ -13,7 +13,6 @@ public class SEGM01 {
         for(int i=0; i<test.length; i++){
             test[i] = sc.nextLine();
         }
-
         for(int i=0; i<test.length; i++){
             calculateConsecutive1(test[i]);
         }

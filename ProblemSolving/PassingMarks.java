@@ -2,6 +2,10 @@ package ProblemSolving;
 
 import java.util.Scanner;
 
+//A student has apeared in an exam of 3 sub Bio, Che, Phy
+//with a maximum of 80 marks. WAP a fun() that returns the sum
+//of marks of the sub in which student has managed to pass the
+//exam. The passing percentage is 40.00. (double)
 public class PassingMarks {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
