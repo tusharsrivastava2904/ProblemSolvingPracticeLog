@@ -1,4 +1,4 @@
-package ProblemSolving;
+package ProblemSolving.GFG;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package ProblemSolving;
+package ProblemSolving.InterviewQuestion2022;
 
 import java.util.Scanner;
 

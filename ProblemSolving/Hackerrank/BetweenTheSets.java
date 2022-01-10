@@ -1,3 +1,5 @@
+package ProblemSolving.Hackerrank;
+
 import java.util.Scanner;
 
 //find nos. between the arrays that are factors of all elements of second array --and-- all elements of first array are their factors

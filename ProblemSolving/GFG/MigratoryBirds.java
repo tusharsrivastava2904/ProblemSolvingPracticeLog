@@ -5,7 +5,7 @@
 */
 
 //link: https://www.hackerrank.com/challenges/migratory-birds/problem
-package ProblemSolving;
+package ProblemSolving.GFG;
 
 import java.util.Collections;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package ProblemSolving;
+package ProblemSolving.GFG;
 
 import java.util.ArrayList;
 import java.util.HashSet;

@@ -1,4 +1,4 @@
-/*
+package ProblemSolving.Hackerrank;/*
  * Tushar Srivastava
  * #100DaysOfCode
  * tusharsrivastava2904@gmail.com 

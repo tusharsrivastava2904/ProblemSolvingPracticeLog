@@ -1,3 +1,5 @@
+package ProblemSolving.Hackerrank;
+
 import java.util.Scanner;
 
 public class ArrayReversal {

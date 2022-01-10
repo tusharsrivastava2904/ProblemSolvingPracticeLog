@@ -1,5 +1,5 @@
 //url: https://www.hackerrank.com/challenges/counting-valleys/problem?h_r=profile
-package ProblemSolving;
+package ProblemSolving.GFG;
 
 import java.util.Scanner;
 

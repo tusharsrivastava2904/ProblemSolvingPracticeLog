@@ -1,10 +1,10 @@
-/*
+package ProblemSolving.Hackerrank;/*
  * Tushar Srivastava
  * #100DaysOfCode
  * tusharsrivastava2904@gmail.com 
 */
 
-//LoopsII Hackerrannk: Java    a +2^0*b, a +2^0*b +2^1*b, ... , (a +2^0*b +2^1*b +...+2^n-1*b)
+//ProblemSolving.Hackerrank.LoopsII Hackerrannk: Java    a +2^0*b, a +2^0*b +2^1*b, ... , (a +2^0*b +2^1*b +...+2^n-1*b)
 
 import java.util.ArrayList;
 import java.util.Scanner;

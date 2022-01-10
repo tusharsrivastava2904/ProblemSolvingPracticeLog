@@ -9,7 +9,7 @@
 //	array[i] + array[j] %k == 0, for a given integer k
 
 
-package ProblemSolving;
+package ProblemSolving.GFG;
 
 import java.util.Scanner;
 
