@@ -1,6 +1,5 @@
 package ProblemSolving.Codeforces;
 
-import javax.swing.plaf.synth.SynthScrollPaneUI;
 import java.util.Scanner;
 
 public class WatermelonCF {
