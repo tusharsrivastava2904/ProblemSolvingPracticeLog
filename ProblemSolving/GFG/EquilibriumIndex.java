@@ -15,7 +15,6 @@ public class EquilibriumIndex {
         }
         System.out.println(findEquilibrium(arr));
     }
-
     private static int findEquilibrium(int[] arr) {
         int sumLow = 0;
         int sumHigh = 0;
