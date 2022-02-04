@@ -19,6 +19,22 @@ import java.util.Scanner;
 *               1. XOR the last n elements (==numberOfPackets[i]) in the following way:
 *                           element xor x[i]    (x-> array of numbers used for xor)
 *
+* Test Case:
+*           4
+*           10 9 12 3   //data
+*           2
+*           1 2         // typeOfOperation
+*           2 1         // numberOfPackets
+*           5 10        // X[]
+*           ---------------
+*           15 12 12 9
+*
+* Explanation:
+*           type[0] = 1 -> type1 encryption for first numberOfElements[0]=2 elements of data[]
+*               => data[] = 15 12 12 3
+*           type[1] = 2 -> type2 encryption for last numberOfElements[1]=1 elements of data[]
+*               => data[] = 15 12 12 9
+*
 * */
 
 public class TransmissionOfPackets {
