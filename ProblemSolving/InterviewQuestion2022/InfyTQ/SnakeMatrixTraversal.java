@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /*
+* (Tushar Srivastava)
 * Problem stmt: Consider a matrix m X n matrix. where m>1 and n>1. Identify and print
 *               outnum based on below logic.
 *
