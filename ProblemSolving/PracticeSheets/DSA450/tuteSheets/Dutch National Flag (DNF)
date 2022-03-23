@@ -1,0 +1,30 @@
+# DUTCH NATIONAL FLAG
+
+-> given: N obj red white blue
+-> aim: sort all items of same colors together
+
+Approach 1: 2-WAY PARTITIONING
+    -> consider just 2 colors: 0, 1
+    -> we divide the sequence in three sections: [0, 0, 0, 1, 0, 1, 1, 0, 1]
+            1. [0...Low - 1] zeros
+            2. [Low...High] unknowns
+            3. [High + 0...N] ones
+    -> we try to minimize the area of Unknowns
+    -> initializing Low with (0)th index and High with (N-1)th index
+    -> traversing the sequence while Low does not coincide with High
+            -> if arr[Low] == 0: Low++
+            -> else if arr[High] == 1: swap(arr[Low], arr[High]) and High--
+
+Approach 2: 3-WAY PARTITIONING
+    -> considering 3 colors: 0, 1, 2
+    -> we divide the sequence in four sections: [0, 0, 0, 2, 1, 1, 2, 0, 2, 2, 1, 2]
+            1. [0...Low - 1] zeros
+            2. [Low...Mid - 1] ones
+            3. [Mid...High] unknowns
+            4. [High + 0...N] twos
+    -> we try to minimize the area of Unknowns
+    -> initializing Low and Mid at (0)th index and High at index (N-1)
+    -> traversing the sequence while Mid does not coincide with High
+            -> if arr[Mid] == 1: Mid++
+            -> else if arr[Mid] == 0: swap(arr[Mid], arr[Low]) and low++, Mid++
+            -> else if arr[Mid] == 2: swap(arr[Mid], arr[High]) and High--
