@@ -1,0 +1,12 @@
+# GREATEST COMMON DIVISOR (GCD)
+
+-> LCM(a, b) * GCD(a, b) = |a.b|
+
+APPROACH 1: USING RECURSION
+    -> gcd(a, b){
+            if(b==0){
+                return a
+            } else {
+                return gcd(b, a%b)
+            }
+       }

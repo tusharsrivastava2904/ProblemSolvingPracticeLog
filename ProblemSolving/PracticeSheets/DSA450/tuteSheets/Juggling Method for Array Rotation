@@ -1,0 +1,48 @@
+# JUGGLING METHOD FOR ARRAY ROTATION
+
+-> improvised version of one-by-one array rotation
+
+ONE-BY-ONE ARRAY ROTATIONS:
+    -> Time Complexity: O(n*d)
+    -> Aux Space: O(1)
+    -> store the first element in (temp)
+    -> shift all the array element to one-left index
+    -> store back the (temp) value to the last index
+
+    int temp = arr[0]
+    for(int i=0; i<n-1; i++){
+        arr[i] = arr[i+1]
+    }
+    arr[n-1] = temp;
+
+JUGGLING METHOD:
+    -> Time Complexity: O(n)
+    -> Aux Space: O(1)
+    -> divide array in sets (no. of sets = GCD(n, d)) : d is no. of left rotations required
+    -> move the elements within sets by one-left
+
+    [(1), 2, 3, (4), 5, 6, (7), 8, 9, (10), 11, 12]
+    [(4), 2, 3, (7), 5, 6, (10), 8, 9, (1), 11, 12] :: set1: [(1), (4), (7), (10)]
+    [4, (5), 3, 7, (8), 6, 10, (11), 9, 1, (2), 12] :: set2: [(2), (5), (8), (11)]
+    [4, 5, (6), 7, 8, (9), 10, 11, (12), 1, 2, (3)] :: set3: [(3), (6), (9), (12)]
+
+    d = d % n (for case where d>n)
+    int numOfSets = gcd(d, n)
+    int temp, k, l
+    for(int i=0; i<numOfSets; i++){
+        // i -> set number
+
+        temp = arr[i]   //putting the first value of the set in temp for shifting it
+        j = i       // copying the set number in j
+        while (true){
+            k = j + d   //desired new index of each element of the set
+            if (k>=n) {
+                k = k - n;  //sending it to the starting side of the array
+            }
+            if (k==i) break;
+            arr[j] = arr[k]
+            j = k
+        }
+        arr[j] = temp
+    }
+

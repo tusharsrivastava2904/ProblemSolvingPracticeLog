@@ -1,0 +1,17 @@
+# KADANE'S ALGORITHM
+
+-> It is used to find the maximum contiguous sum in a 1-D array
+-> idea is to look for all positive contiguous subarray portions and if the max_so_far is
+    found to be smaller than the max_ending_here, update the max_so_far with the value of max_ending_here
+
+    max_so_far = Integer.MIN_VALUE
+    max_ending_here = 0
+    for(int i=0; i<n; i++){
+        max_ending_here += arr[i]
+        if (max_ending_here > max_so_far){
+            max_so_far = max_ending_here
+        }
+        if (max_ending_here < 0){
+            max_ending_here = 0
+        }
+    }
