@@ -1,4 +1,4 @@
-package ProblemSolving.PracticeSheets.DSA450;
+package ProblemSolving.PracticeSheets.DSA450.tuteSheets.Arrays;
 
 import java.util.HashSet;
 import java.util.Scanner;
