@@ -35,7 +35,7 @@ JUGGLING METHOD:
         temp = arr[i]   //putting the first value of the set in temp for shifting it
         j = i       // copying the set number in j
         while (true){
-            k = j + d   //desired new index of each element of the set
+            k = j + d   //(k->bracket no. at each step) (k is moved forward, j follows k, copies element of k)
             if (k>=n) {
                 k = k - n;  //sending it to the starting side of the array
             }
