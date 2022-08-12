@@ -3,6 +3,15 @@ package ProblemSolving.LeetCode;
 import java.util.HashMap;
 import java.util.Scanner;
 
+/*
+* two strings are called isomorphic if each character follows sequential one-to-one mapping.
+* for eg: s: egg t: add
+* explanation: e-> a, g->d true
+*
+* s: foo t: bar
+* f-> b, o-> a, o-> r false
+* */
+
 public class IsomorphicStrings {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
