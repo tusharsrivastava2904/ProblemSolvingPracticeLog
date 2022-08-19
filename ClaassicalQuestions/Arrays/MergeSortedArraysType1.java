@@ -2,20 +2,16 @@ package ClaassicalQuestions.Arrays;
 
 import java.util.Scanner;
 
+import static ClaassicalQuestions.Arrays.CommonUtilities.ArrayInput.takeInput;
+import static ClaassicalQuestions.Arrays.CommonUtilities.ArrayOutput.printArray;
+
 public class MergeSortedArraysType1 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int m = sc.nextInt();
-        int n = sc.nextInt();
-        int[] a1 = new int[m];
-        int[] a2 = new int[n];
-        for (int i=0; i<m; i++){
-            a1[i] = sc.nextInt();
-        }
-        for (int i=0; i<n; i++){
-            a2[i] = sc.nextInt();
-        }
-        sc.close();
+        int[] a1 = takeInput();
+        int[] a2 = takeInput();
+
+        int m = a1.length;
+        int n = a2.length;
 
         printArray(mergeSorted(m, n, a1, a2));
     }
@@ -54,11 +50,5 @@ public class MergeSortedArraysType1 {
         }
 
         return res;
-    }
-
-    private static void printArray(int[] b){
-        for (int i: b){
-            System.out.print(i+" ");
-        }
     }
 }
