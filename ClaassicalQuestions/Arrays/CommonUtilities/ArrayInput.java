@@ -12,6 +12,7 @@ public class ArrayInput {
         for (int i=0; i<m; i++){
             arr[i] = sc.nextInt();
         }
+        sc.close();
         return arr;
     }
 }
