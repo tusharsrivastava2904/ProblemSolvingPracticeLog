@@ -44,7 +44,7 @@ Detect Cycle:
 Detect the Junction:
 --------------------
     public static Node DetectJunction(Node head){
-        Node meet = FloydCycleDetection(head);
+        Node meet = FloydCycleDetection(head);      //return the meeting point
         Node start = head;
 
         while(start!=meet){
@@ -53,4 +53,39 @@ Detect the Junction:
         }
 
         return start;
+    }
+
+Remove Loop from LL:
+--------------------
+public static void removeLoop(Node head){
+        // remove the loop without losing any nodes
+        Node slow = head;
+        Node fast = head;
+        boolean loop = false;
+
+        //at the end of this loop fast and slow will be at "meet" (not necessarily "junction")
+        while(fast!=null && fast.next!=null){
+            slow = slow.next;
+            fast = fast.next.next;
+            if(slow == fast){
+                loop = true;
+                break;
+            }
+        }
+
+        if(loop){
+            slow=head;
+            // loop to send slow and fast to junction
+            while(slow!=fast){
+                slow = slow.next;
+                fast = fast.next;
+            }
+
+            // loop to move fast to the node to point just before junction,
+            // so that we make its next -> null
+            while(fast.next!=slow){
+                fast = fast.next;
+            }
+            fast.next=null;
+        }
     }
