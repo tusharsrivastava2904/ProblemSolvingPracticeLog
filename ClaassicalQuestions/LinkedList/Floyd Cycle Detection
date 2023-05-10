@@ -1,9 +1,11 @@
 # FLOYD CYCLE DETECTION ALGORITHM
 ----------------------------------
 
-    1 -> 2 -> 3 -> 4
-              ^    |
-              '----'
+        A        B
+    1 -> 2 -> 3 ---> 4
+              ^      | C
+              '- 5 <-'
+
 
 -> Two pointer approach to detect a cycle in a LinkedList
 -> Time Complexity: O(n)
@@ -13,6 +15,17 @@
 -> move the two pointers at different speeds through the LinkedList in search of fast.next pointing to NULL
 -> if the two pointers collide at nay given time, Cycle should be marked as detected, else mark is not-detected
 
+Mathematical Proof:
+-------------------
+
+//slow moves m turns, and fast moves n turns in the loop before meeting at junction -> n>m
+=> distance travelled by slow * 2 = distance travelled by fast
+=> (A + m(B+C)) * 2 = A + n(B+C)
+=> A + B = (n-m)(B+C)
+=> A + B = K (B+C)      //A+B is an integral multiple of B + C
+
+Detect Cycle:
+-------------
 
     public static boolean FloydCycleDetection(Node head){
         Node slow = head;
@@ -26,4 +39,18 @@
             }
         }
         return false;
+    }
+
+Detect the Junction:
+--------------------
+    public static Node DetectJunction(Node head){
+        Node meet = FloydCycleDetection(head);
+        Node start = head;
+
+        while(start!=meet){
+            start = start.next;
+            meet = meet.next;
+        }
+
+        return start;
     }
